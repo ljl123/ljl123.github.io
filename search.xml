@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>前端学习计划</title>
+    <url>/2021/05/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h3 id="一、基础">一、基础</h3>
+<ol>
+<li>
+<p>Vue<br>
+<a href="https://www.bilibili.com/video/BV18E411a7mC?from=search&amp;seid=14251799674482834709">狂神的视频</a></p>
+</li>
+<li>
+<p>js作用域、数据类型</p>
+</li>
+<li>
+<p>this指向</p>
+</li>
+<li>
+<p>异步</p>
+</li>
+<li>
+<p>待补充</p>
+</li>
+</ol>
+<h3 id="二、进阶">二、进阶</h3>
+<ol>
+<li>
+<p>http、http缓存策略</p>
+</li>
+<li>
+<p>数据请求方式</p>
+</li>
+<li>
+<p>待补充</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+</search>
