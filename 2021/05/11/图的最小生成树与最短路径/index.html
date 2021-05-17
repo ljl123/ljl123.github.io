@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="欢迎来到ljl的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ljl的博客">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="图的最小生成树与最短路径很久没碰印象模糊了，重新记录下...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图的最小生成树与最短路径">
+<meta property="og:url" content="http://example.com/2021/05/11/%E5%9B%BE%E7%9A%84%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E4%B8%8E%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/index.html">
 <meta property="og:site_name" content="ljl的博客">
-<meta property="og:description" content="欢迎来到ljl的博客">
+<meta property="og:description" content="图的最小生成树与最短路径很久没碰印象模糊了，重新记录下...">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-11T11:24:51.000Z">
+<meta property="article:modified_time" content="2021-05-16T07:16:15.629Z">
 <meta property="article:author" content="ljl">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/2021/05/11/%E5%9B%BE%E7%9A%84%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E4%B8%8E%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">
 
 
 <script id="page-configurations">
@@ -38,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | ljl的博客</title>
+  <title>图的最小生成树与最短路径 | ljl的博客</title>
   
 
 
@@ -179,190 +181,140 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 8 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/%E5%9B%BE%E7%9A%84%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E4%B8%8E%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2322326169,1418475405&fm=11&gp=0.jpg">
+      <meta itemprop="name" content="ljl">
+      <meta itemprop="description" content="欢迎来到ljl的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ljl的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          图的最小生成树与最短路径
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-05-11 19:24:51" itemprop="dateCreated datePublished" datetime="2021-05-11T19:24:51+08:00">2021-05-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-16 15:16:15" itemprop="dateModified" datetime="2021-05-16T15:16:15+08:00">2021-05-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">图的最小生成树与最短路径很久没碰印象模糊了，重新记录下...</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-16T09:25:51+08:00"
-              content="2021-05-16">
-          05-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/16/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" itemprop="url">
-            <span itemprop="name">前后端分离</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-16T09:24:51+08:00"
-              content="2021-05-16">
-          05-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/16/Vue%E4%BA%8C/" itemprop="url">
-            <span itemprop="name">Vue二</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-15T09:24:51+08:00"
-              content="2021-05-15">
-          05-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/15/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url">
-            <span itemprop="name">JavaScript基础</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-12T09:25:51+08:00"
-              content="2021-05-12">
-          05-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/12/%E5%89%91%E6%8C%87Offer%E9%A2%98%E7%9B%AE%E5%88%97%E8%A1%A8/" itemprop="url">
-            <span itemprop="name">剑指Offer题目列表</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-12T09:24:51+08:00"
-              content="2021-05-12">
-          05-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/12/Vue%E4%B8%80/" itemprop="url">
-            <span itemprop="name">Vue一</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-11T19:24:51+08:00"
-              content="2021-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/11/%E5%9B%BE%E7%9A%84%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E4%B8%8E%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" itemprop="url">
-            <span itemprop="name">图的最小生成树与最短路径</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-11T09:24:51+08:00"
-              content="2021-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/11/MyBatis%E7%BC%93%E5%AD%98/" itemprop="url">
-            <span itemprop="name">MyBatis缓存</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-07T09:24:51+08:00"
-              content="2021-05-07">
-          05-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" itemprop="url">
-            <span itemprop="name">前端学习计划</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <p>两者没有太大的关联，只不过在一定程度上应用了贪心算法的思想而已，但区别比较明显。</p>
+<h3 id="一、区别">一、区别</h3>
+<p>最小生成树能够保证首先是树（对于n个顶点的图只有n-1条边），其次保证任意两个顶点之间都可达，再次保证这棵树的边权值之和为最小，但不能保证任意两点之间是最短路径。</p>
+<p>最短路径保证从源点S到目地点D的路径最小（有向图中不要求终点能到起点），不保证任意两个顶点都可达</p>
+<h3 id="二、最小生成树">二、最小生成树</h3>
+<ol>
+<li>
+<p>普里姆（Prim）算法<br>
+Prim算法是以某顶点为起点，<strong>逐步</strong>找各顶点上最小权值的边来构建最小生成树的<br>
+算法描述：<br>
+从单一顶点开始，普里姆算法按照以下步骤逐步扩大树中所含顶点的数目，直到遍及连通图的所有顶点。<br>
+（1）输入：一个加权连通图，其中顶点集合为V，边集合为E；<br>
+（2）初始化：Vnew = {x}，其中x为集合V中的任一节点（起始点），Enew = {}；<br>
+（3）重复下列操作，直到Vnew = V：<br>
+在集合E中选取权值最小的边（u, v），其中u为集合Vnew中的元素，而v则不是（如果存在有多条满足前述条件即具有相同权值的边，则可任意选取其中之一）；<br>
+将v加入集合Vnew中，将（u, v）加入集合Enew中；<br>
+（4）输出：使用集合Vnew和Enew来描述所得到的最小生成树。</p>
+</li>
+<li>
+<p>克鲁斯卡尔（Kruskal）算法<br>
+将连通网中的所有边按照权值大小进行升序排序，从小到大依次选择。</p>
+</li>
+</ol>
+<p>由于最小生成树本身是一棵生成树，所以需要时刻满足以下两点：<br>
+（1）生成树中任意顶点之间有且仅有一条通路，也就是说，生成树中不能存在回路；<br>
+（2）对于具有 n 个顶点的连通网，其生成树中只能有 n-1 条边，这 n-1 条边连通着 n 个顶点。<br>
+<a target="_blank" rel="noopener" href="http://data.biancheng.net/view/41.html">参考链接</a></p>
+<h3 id="二、最短路径">二、最短路径</h3>
+<p>迪杰斯特拉（Dijkstra）算法<br>
+1.算法思想<br>
+令G = （V，E）为一个带权有向图，把图中的顶点集合V分成两组，第一组为已求出最短路径的顶点集合S（初始时S中只有源节点，以后每求得一条最短路径，就将它对应的顶点加入到集合S中，直到全部顶点都加入到S中）；第二组是未确定最短路径的顶点集合U。在加入过程中，总保持从源节点v到S中各顶点的最短路径长度不大于从源节点v到U中任何顶点的最短路径长度。<br>
+2.算法步骤<br>
+（1）初始化时，S只含有源节点；<br>
+（2）从U中选取一个距离v最小的顶点k加入S中（该选定的距离就是v到k的最短路径长度）；<br>
+（3）以k为新考虑的中间点，修改U中各顶点的距离；<strong>若从源节点v到顶点u的距离（经过顶点k）比原来距离（不经过顶点k）短，则修改顶点u的距离值，修改后的距离值是顶点k的距离加上k到u的距离</strong>；<br>
+（4）重复步骤（2）和（3），直到所有顶点都包含在S中。</p>
+<p><strong>注：迪杰斯特拉（Dijkstra）算法和普里姆（Prim）算法找下一点的区别是迪杰斯特拉就算加入下一点也一直是找离源点最近的，而普里姆加入下一点之后是找离已加入的这块区域中某个点最近的，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/spaceyqy/article/details/39024675">示例</a></strong></p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+    <div>
+      
+        
+
+
+      
+    </div>
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/11/MyBatis%E7%BC%93%E5%AD%98/" rel="prev" title="MyBatis缓存">
+      <i class="fa fa-chevron-left"></i> MyBatis缓存
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/12/Vue%E4%B8%80/" rel="next" title="Vue一">
+      Vue一 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -422,6 +374,7 @@
       
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">一、区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="nav-number">2.</span> <span class="nav-text">二、最小生成树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84"><span class="nav-number">3.</span> <span class="nav-text">二、最短路径</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
